@@ -1,6 +1,6 @@
-import f1 from './sumMins.mjs'
-import f2 from './getSumMins.mjs'
-import f3 from './minSum.mjs'
+import f1 from '../modules/sumMins.mjs'
+import f2 from '../modules/getSumMins.mjs'
+import f3 from '../modules/minSum.mjs'
 
 document.querySelector('.method1').addEventListener('click', calc1)
 document.querySelector('.method2').addEventListener('click', calc2)
