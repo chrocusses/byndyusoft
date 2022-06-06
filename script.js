@@ -1,7 +1,6 @@
 import f1 from './sumMins.mjs'
 import f2 from './getSumMins.mjs'
-import f3 from './sumLowerEl.mjs'
-import isNum from './isNum.mjs'
+import f3 from './minSum.mjs'
 
 document.querySelector('.method1').addEventListener('click', calculate1)
 document.querySelector('.method2').addEventListener('click', calculate2)
