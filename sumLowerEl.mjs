@@ -4,40 +4,40 @@ function sumLowerEl(array) {
     let newArray
 
     if (array.length < 2 || array.length > 50) {
-        return 'Массив должен содержать от 2 до 50 элементов!'  //  Ставим границу максимальной длины массива (например, 50)
+        return 'Массив должен содержать от 2 до 50 элементов!'
     }
 
     let isNum = function isNum(el) {
-        return typeof Number(el) === 'number' && isFinite(el)  //  Функция для очистки массива от "мусора"
+        return typeof Number(el) === 'number' && isFinite(el)
     }
 
-    newArray = array.filter(isNum)  //  Формируем новый массив !!! только из чисел !!!
+    newArray = array.filter(isNum)
 
-    if (newArray.length === 0) {  //  Проверка на содержание чисел в новом массиве
+    if (newArray.length === 0) {
         return 'В массиве нет чисел!'
     } else if (newArray.length < 2) {
         return 'В массиве недостаточно чисел!'
     }
 
-    min1 = newArray[0]  //  Присваиваем первый элемент нового массива min1
+    min1 = newArray[0]
 
-    newArray.forEach(el => {  // Ищем первое минимальное значение
+    newArray.forEach(el => {
         if (Number(el) < min1) {
             min1 = el
         }
     })
     
-    newArray.splice(newArray.findIndex(el => el === min1), 1)  //  Удаляем из массива min1
+    newArray.splice(newArray.findIndex(el => el === min1), 1)
     
-    min2 = newArray[0]  //  Присваиваем переменной min2 минимальное значение (отличное от min1)
+    min2 = newArray[0]
 
-    newArray.forEach(el => {  //  Ищем второе минимальное значение
+    newArray.forEach(el => {
         if(Number(el) < min2) {
             min2 = el
         }
     })
 
-    return +min1 + +min2  //  Возвращаем сумму двух минимальных чисел в массиве
+    return +min1 + +min2
 }
 
 export default sumLowerEl
