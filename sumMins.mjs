@@ -1,27 +1,25 @@
+import isNum from "./isNum.mjs"
+
 function sumMins(array) {
     let min1
     let min2
-    let filteredArray
+    let numbers
 
     if (array.length < 2 || array.length > 50) {
         return 'Массив должен содержать от 2 до 50 элементов!'
     }
 
-    let isNum = function isNum(el) {
-        return typeof Number(el) === 'number' && isFinite(el)
-    }
+    numbers = array.filter(isNum)
 
-    filteredArray = array.filter(isNum)
-
-    if (filteredArray.length === 0) {
+    if (numbers.length === 0) {
         return 'В массиве нет чисел!'
-    } else if (filteredArray.length < 2) {
+    } else if (numbers.length < 2) {
         return 'В массиве недостаточно чисел!'
     }
 
-    filteredArray.sort((a, b) => a - b)
-    min1 = filteredArray[0]
-    min2 = filteredArray[1]
+    numbers.sort((a, b) => a - b)
+    min1 = numbers[0]
+    min2 = numbers[1]
 
     return Number(min1) + Number(min2)
 }
