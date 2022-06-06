@@ -1,0 +1,19 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "find sum of 2 minimum elements in array",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrocusses/byndyusoft.git"
+  },
+  "author": "Chrocusses",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrocusses/byndyusoft/issues"
+  },
+  "homepage": "https://github.com/chrocusses/byndyusoft#readme"
+}
