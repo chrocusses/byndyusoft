@@ -1,27 +1,27 @@
-import f1 from '../modules/sumMins.mjs'
-import f2 from '../modules/getSumMins.mjs'
-import f3 from '../modules/minSum.mjs'
+import sumMins from '../modules/sumMins.mjs'
+import getSumMins from '../modules/getSumMins.mjs'
+import minSum from '../modules/minSum.mjs'
 
-document.querySelector('.method1').addEventListener('click', calc1)
-document.querySelector('.method2').addEventListener('click', calc2)
-document.querySelector('.method3').addEventListener('click', calc3)
+document.querySelector('.sumMins').addEventListener('click', calc1)
+document.querySelector('.getSumMins').addEventListener('click', calc2)
+document.querySelector('.minSum').addEventListener('click', calc3)
 
 function calc1() {
-    const data = document.querySelector('.i-1').value
+    const data = document.querySelector('.inputData').value
     const dataArray = data.split(",")
-    document.querySelector('.result').innerHTML = 'Result: ' + f1(dataArray)
+    document.querySelector('.result').innerHTML = 'Result: ' + sumMins(dataArray)
 }
 
 function calc2() {
-    const data = document.querySelector('.i-1').value
+    const data = document.querySelector('.inputData').value
     const dataArray = data.split(",")
-    document.querySelector('.result').innerHTML = 'Result: ' + f2(dataArray)
+    document.querySelector('.result').innerHTML = 'Result: ' + getSumMins(dataArray)
 }
 
 function calc3() {
-    const data = document.querySelector('.i-1').value
+    const data = document.querySelector('.inputData').value
     const dataArray = data.split(",")
-    document.querySelector('.result').innerHTML = 'Result: ' + f3(dataArray)
+    document.querySelector('.result').innerHTML = 'Result: ' + minSum(dataArray)
 }
 
 
