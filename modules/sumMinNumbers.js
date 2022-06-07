@@ -44,8 +44,5 @@ function sumMinNumbers(array) {
     return min1 + min2
 }
 
-<<<<<<< HEAD:modules/sumMinNumbers.js
 export { sumMinNumbers }
-=======
 
->>>>>>> e08ed19b5f206a1e29dd6ab9a30c1b51e7dcc22a:modules/sumMinNumbers.mjs
