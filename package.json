@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/chrocusses/byndyusoft/issues"
   },
-  "homepage": "https://github.com/chrocusses/byndyusoft#readme"
+  "homepage": "https://github.com/chrocusses/byndyusoft#readme",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
 }
