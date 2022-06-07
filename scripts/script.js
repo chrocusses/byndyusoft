@@ -1,7 +1,7 @@
 import sumMinNumbers from '../modules/sumMinNumbers.mjs'
 
 
-document.querySelector('.sumMinNumbers').addEventListener('click', calc)
+document.querySelector('.getSumMinNumbers').addEventListener('click', calc)
 
 function calc() {
     const data = document.querySelector('.inputData').value
