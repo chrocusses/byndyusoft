@@ -44,4 +44,5 @@ function sumMinNumbers(array) {
     return min1 + min2
 }
 
+module.exports = {sumMinNumbers}
 export default sumMinNumbers
