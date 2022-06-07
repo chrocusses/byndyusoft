@@ -1,6 +1,5 @@
 import sumMinNumbers from '../modules/sumMinNumbers.mjs'
 
-
 document.querySelector('.getSumMinNumbers').addEventListener('click', calc)
 
 function calc() {
