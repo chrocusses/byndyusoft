@@ -1,4 +1,4 @@
-import isNum from "./isNum.mjs"
+import { isNum } from "./isNum.js"
 
 function sumMinNumbers(array) {
     let numbers = []
@@ -44,4 +44,4 @@ function sumMinNumbers(array) {
     return min1 + min2
 }
 
-export default sumMinNumbers
+export { sumMinNumbers }

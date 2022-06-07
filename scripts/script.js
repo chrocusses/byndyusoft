@@ -1,11 +1,12 @@
-import sumMinNumbers from '../modules/sumMinNumbers.mjs'
+import { sumMinNumbers } from '../modules/sumMinNumbers.js'
 
-document.querySelector('.getSumMinNumbers').addEventListener('click', calc)
+document.querySelector('.getSumMinNumbers').addEventListener('click', calculateSumOfMinNumbers)
 
-function calc() {
-    const data = document.querySelector('.inputData').value
-    const dataArray = data.split(",")
-    document.querySelector('.result').innerHTML = 'Result: ' + sumMinNumbers(dataArray)
+function calculateSumOfMinNumbers() {
+    const inputString = document.querySelector('.inputData').value
+    const numbersArray = inputString.split(",").map(Number)
+
+    document.querySelector('.result').innerHTML = 'Result: ' + sumMinNumbers(numbersArray)
 }
 
 
