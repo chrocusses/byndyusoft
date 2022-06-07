@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chrocusses/byndyusoft#readme",
   "devDependencies": {
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0"
   }
 }
