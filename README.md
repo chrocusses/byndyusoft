@@ -1,3 +1,4 @@
 # Find sum of 2 min numbers
 
-Use 3 modules to find sum of 2 min numbers from input
+Write a numbers separated by "," and click on the button. 
+The result will be the sum of 2 minimum numbers.
