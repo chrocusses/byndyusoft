@@ -32,9 +32,30 @@ describe("sumMinNumbers function", () => {
   });
 
   describe("exceptions", () => {
-    test("lesser than required", () => {
+    test("empty array", () => {
+      const actual = sumMinNumbers([4, 3, -19, 492, -10, -1, 2, 8, 13, 77, -100, -12, -3, 4, 18, 23, 7, 3, 0, -1, 11, 45, -22, 24, 25, 4, 3, -19, 492, -10, -1, 2, 8, 13, 77, -100, -12, -3, 4, 18, 23, 7, 3, 0, -1, 11, 45, -22, 24, 25, 51]);
+      const expected = 'Массив должен содержать от 2 до 50 элементов!';
+
+      expect(actual).toEqual(expected);
+    });
+
+    test("filled array", () => {
       const actual = sumMinNumbers([]);
       const expected = 'Массив должен содержать от 2 до 50 элементов!';
+
+      expect(actual).toEqual(expected);
+    });
+
+    test("only 1 number in array", () => {
+      const actual = sumMinNumbers(['z0', 'speq', 5]);
+      const expected = 'В массиве недостаточно чисел!';
+
+      expect(actual).toEqual(expected);
+    });
+
+    test("no numbers array", () => {
+      const actual = sumMinNumbers(['queue', 'fas', '---', '!']);
+      const expected = 'В массиве нет чисел!';
 
       expect(actual).toEqual(expected);
     });
