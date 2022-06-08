@@ -1,10 +1,10 @@
-import { sumMinNumbers } from '../modules/sumMinNumbers.js'
+import { sumMinNumbers } from './sumMinNumbers.js'
 
 document.querySelector('form').addEventListener('submit', calculateSumOfMinNumbers)
 
 
-function calculateSumOfMinNumbers(a) {
-    a.preventDefault()
+function calculateSumOfMinNumbers(event) {
+    event.preventDefault()
     const inputString = document.querySelector('input').value
     const numbersArray = inputString.split(",").map(Number)
 

@@ -1,4 +1,4 @@
-import { isNum } from "./isNum.js"
+import { isNum } from './isNum.js'
 
 function sumMinNumbers(array) {
     let numbers = []
