@@ -1,14 +1,18 @@
 import { sumMinNumbers } from "./sumMinNumbers.js";
 
-document
-  .querySelector("form")
-  .addEventListener("submit", calculateSumOfMinNumbers);
+document.querySelector("form").addEventListener("submit", formSubmitHandler);
 
-let result = document.querySelector(".result");
+const result = document.querySelector(".result");
 
-function calculateSumOfMinNumbers(event) {
-  event.preventDefault();
-  const inputString = document.querySelector("input").value;
-  const numbersArray = inputString.split(",").map(Number);
-  result.innerHTML = "Result: " + sumMinNumbers(numbersArray);
+function formSubmitHandler(event) {
+event.preventDefault();
+
+const inputValue = event.target.querySelector("input").value;
+
+try {
+    const numbersArray = inputValue.split(",").map(Number);
+    result.innerHTML = `Result: ${sumMinNumbers(numbersArray)}`;
+  } catch (exception){
+    result.innerHTML = 'Enter from 2 to 50 numbers separated by commas';
+  }
 }
