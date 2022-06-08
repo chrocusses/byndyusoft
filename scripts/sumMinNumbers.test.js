@@ -1,73 +1,55 @@
 import { sumMinNumbers } from "./sumMinNumbers.js";
 
 describe("sumMinNumbers function", () => {
-  describe("correct results", () => {
-    test("only positive numbers", () => {
+  describe("Done", () => {
+       test("only positive numbers array", () => {
       const actual = sumMinNumbers([4, 0, 3, 19, 492, 10, 1]);
       const expected = 1;
 
-      expect(actual).toEqual(expected);
+      expect(actual).toBe(expected);
     });
 
-    test("only negative numbers", () => {
+    test("only negative numbers array", () => {
       const actual = sumMinNumbers([-4, -3, -19, -492, -10, -1]);
       const expected = -511;
 
-      expect(actual).toEqual(expected);
+      expect(actual).toBe(expected);
     });
 
-    test("mixed numbers", () => {
+    test("mixed numbers array", () => {
       const actual = sumMinNumbers([4, 3, -19, 492, -10, -1]);
       const expected = -29;
 
-      expect(actual).toEqual(expected);
+      expect(actual).toBe(expected);
     });
 
-    test("numbers and strings", () => {
-      const actual = sumMinNumbers([
-        "ab4",
-        4,
-        3,
-        "Z1",
-        -19,
-        492,
-        "QWERTY",
-        -10,
-        -1,
-      ]);
+    test("numbers and strings array", () => {
+      const actual = sumMinNumbers(["ab4", 4, 3, "Z1", -19, 492, "QWERTY", -10, -1]);
       const expected = -29;
 
-      expect(actual).toEqual(expected);
+      expect(actual).toBe(expected);
     });
   });
 
-  describe("exceptions", () => {
+  describe("Errors", () => {
     test("filled array", () => {
-      const actual = sumMinNumbers(new Array(51));
-      const expected = "Массив должен содержать от 2 до 50 элементов!";
+      const actual = () => {
+        sumMinNumbers(new Array(51));
+      };
 
-      expect(actual).toEqual(expected);
+      expect(actual).toThrow(
+        new Error("Массив должен содержать от 2 до 50 элементов!"),
+      );
     });
 
     test("empty array", () => {
-      const actual = sumMinNumbers([]);
-      const expected = "Массив должен содержать от 2 до 50 элементов!";
+      const actual = () => {
+        sumMinNumbers([]);
+      };
 
-      expect(actual).toEqual(expected);
-    });
-
-    test("only 1 number in array", () => {
-      const actual = sumMinNumbers(["z0", "speq", 5]);
-      const expected = "В массиве недостаточно чисел!";
-
-      expect(actual).toEqual(expected);
-    });
-
-    test("no numbers array", () => {
-      const actual = sumMinNumbers(["queue", "fas", "---", "!"]);
-      const expected = "В массиве нет чисел!";
-
-      expect(actual).toEqual(expected);
+      expect(actual).toThrow(
+        new Error("Массив должен содержать от 2 до 50 элементов!"),
+      );
     });
   });
 });
