@@ -33,7 +33,7 @@ describe("sumMinNumbers function", () => {
 
   describe("exceptions", () => {
     test("filled array", () => {
-      const actual = sumMinNumbers([4, 3, -19, 492, -10, -1, 2, 8, 13, 77, -100, -12, -3, 4, 18, 23, 7, 3, 0, -1, 11, 45, -22, 24, 25, 4, 3, -19, 492, -10, -1, 2, 8, 13, 77, -100, -12, -3, 4, 18, 23, 7, 3, 0, -1, 11, 45, -22, 24, 25, 51]);
+      const actual = sumMinNumbers(new Array(51));
       const expected = 'Массив должен содержать от 2 до 50 элементов!';
 
       expect(actual).toEqual(expected);
