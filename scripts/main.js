@@ -5,14 +5,14 @@ document.querySelector("form").addEventListener("submit", formSubmitHandler);
 const result = document.querySelector(".result");
 
 function formSubmitHandler(event) {
-event.preventDefault();
+  event.preventDefault();
 
-const inputValue = event.target.querySelector("input").value;
+  const inputValue = event.target.querySelector("input").value;
 
-try {
+  try {
     const numbersArray = inputValue.split(",").map(Number);
     result.innerHTML = `Result: ${sumMinNumbers(numbersArray)}`;
-  } catch (exception){
-    result.innerHTML = 'Enter from 2 to 50 numbers separated by commas';
+  } catch (exception) {
+    result.innerHTML = "Enter from 2 to 50 numbers separated by commas";
   }
 }

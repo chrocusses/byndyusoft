@@ -2,7 +2,7 @@ import { sumMinNumbers } from "./sumMinNumbers.js";
 
 describe("sumMinNumbers function", () => {
   describe("Done", () => {
-       test("only positive numbers array", () => {
+    test("only positive numbers array", () => {
       const actual = sumMinNumbers([4, 0, 3, 19, 492, 10, 1]);
       const expected = 1;
 
@@ -24,7 +24,17 @@ describe("sumMinNumbers function", () => {
     });
 
     test("numbers and strings array", () => {
-      const actual = sumMinNumbers(["ab4", 4, 3, "Z1", -19, 492, "QWERTY", -10, -1]);
+      const actual = sumMinNumbers([
+        "ab4",
+        4,
+        3,
+        "Z1",
+        -19,
+        492,
+        "QWERTY",
+        -10,
+        -1,
+      ]);
       const expected = -29;
 
       expect(actual).toBe(expected);
